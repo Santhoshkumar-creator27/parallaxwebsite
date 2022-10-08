@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Travel</a>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#abt">About</a></li>
+            <li><a href="#ct">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="parallax">
+        <p id="text">Parallax Website</p>
+        <img src="images/monutain_01.png" alt="mountain" id="m1">
+        <img src="images/trees_02.png" alt="trees" id="t2">
+        <img src="images/monutain_02.png" alt="mountain" id="m2">
+        <img src="images/trees_01.png" alt="trees" id="t1">
+        <img src="images/man.png" alt="man" id="man">
+        <img src="images/plants.png" alt="plant" id="plant">
+
+    </section>
+
+
+    <section class="sec" id="abt">
+        <h2>ABOUT</h2>
+        <h2 style="color: #9fe5fb;">What is Parallax Website?</h2>
+        <p>Parallax scrolling is a web site trend where the background content (i.e. an image) is moved at a different
+            speed than the foreground content while scrolling. Click on the links below to see the difference between a
+            website with and without parallax scrolling. </p>
+        <br><br>
+        <h2 style="color: #9fe5fb;">What is Scroll Trigger?</h2>
+        <p>
+            Greensock gang for the ScrollTrigger release. The point of this new plugin is triggering animation when a
+            page scrolls to certain positions, as well as when certain elements are in the viewport. Anything you’d want
+            configurable about it, is. There’s been plenty of scroll-position libraries over the years, but Greensock
+            has a knack for getting the APIs and performance just right — not to mention that because what you want is
+            to trigger animations, now you’ve got Greensock at your fingertips making sure you’re in good hands. It’s
+            tightly integrated with all the other animation possibilities of GSAP (e.g. animating a timeline based on
+            scroll position).
+        </p>
+
+    </section>
+
+
+
+    <section class="sec" id="ct">
+        <h2>Contact Us</h2>
+
+        <div class="container">
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+                <label for="">Enter Name</label><br>
+                <input type="text" name="name" required><br>
+                <label for="">Enter Email</label><br>
+                <input type="email" name="email" required><br>
+                <label for="">Enter Number</label><br>
+                <input type="number" name="num" required><br>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <!-- Triggering Funtion -->
+
+    <script>
+        gsap.from("#m1", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 100,
+        })
+        gsap.from("#m2", {
+            scrollTrigger: {
+                scrub: true
+            },
+            y: 100,
+        })
+        gsap.from("#t2", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 100,
+        })
+        gsap.from("#t1", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 100,
+        })
+        gsap.from("#man", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: -100,
+        })
+        gsap.from("#plant", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: -100,
+        })
+        gsap.from("#text", {
+            scrollTrigger: {
+                scrub: true
+            },
+            x: 300,
+        })
+    </script>
+
+</body>
+
+</html>
